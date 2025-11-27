@@ -2,9 +2,9 @@
 remote_theme: "poole/hyde"
 
 # Setup
-title: "Hyde"
-tagline: "A Jekyll theme"
-description: 'A brazen two-column <a href="http://jekyllrb.com" target="_blank">Jekyll</a> theme that pairs a prominent sidebar with uncomplicated content.'
+title: "Jimin's Portfolio"
+tagline: "Backend Developer"
+description: "Java · Spring Boot · MySQL · Docker"
 url: "https://shypanda0119.github.io"
 baseurl: ""
 
