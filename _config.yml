@@ -1,3 +1,6 @@
+# Use Hyde via remote_theme
+remote_theme: "poole/hyde"
+
 # Dependencies
 markdown: redcarpet
 highlighter: pygments
@@ -9,9 +12,8 @@ relative_permalinks: true
 # Setup
 title: "Hyde"
 tagline: "A Jekyll theme"
-description: 'A brazen two-column <a href="http://jekyllrb.com" target="_blank">Jekyll</a> theme that pairs a prominent sidebar with uncomplicated content. Made by <a href="https://twitter.com/mdo" target="_blank">@mdo</a>.'
+description: 'A brazen two-column <a href="http://jekyllrb.com" target="_blank">Jekyll</a> theme that pairs a prominent sidebar with uncomplicated content.'
 
-# IMPORTANT: Correct for GitHub Pages root domain
 url: "https://shypanda0119.github.io"
 baseurl: ""
 
@@ -24,10 +26,5 @@ paginate: 5
 # Custom vars
 version: "2.1.0"
 
-# GitHub repo info
 github:
   repo: "https://github.com/poole/hyde"
-
-# VERY IMPORTANT: remove any default GitHub theme
-# DO NOT add theme: jekyll-theme-primer
-# DO NOT add remote_theme
