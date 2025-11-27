@@ -1,19 +1,10 @@
-# Use Hyde via remote_theme
+# Theme
 remote_theme: "poole/hyde"
-
-# Dependencies
-markdown: redcarpet
-highlighter: pygments
-
-# Permalinks
-permalink: pretty
-relative_permalinks: true
 
 # Setup
 title: "Hyde"
 tagline: "A Jekyll theme"
 description: 'A brazen two-column <a href="http://jekyllrb.com" target="_blank">Jekyll</a> theme that pairs a prominent sidebar with uncomplicated content.'
-
 url: "https://shypanda0119.github.io"
 baseurl: ""
 
@@ -21,10 +12,19 @@ author:
   name: "Mark Otto"
   url: "https://twitter.com/mdo"
 
+# Pagination
 paginate: 5
 
-# Custom vars
-version: "2.1.0"
-
+# GitHub repo info
 github:
   repo: "https://github.com/poole/hyde"
+
+# Markdown + highlighter (GitHub Pages 공식 지원 조합으로 변경)
+markdown: kramdown
+kramdown:
+  input: GFM
+highlighter: rouge
+
+# Permalinks (GitHub Pages에서 지원하는 방식만 사용)
+permalink: pretty
+
