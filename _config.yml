@@ -9,22 +9,21 @@ url: "https://shypanda0119.github.io"
 baseurl: ""
 
 author:
-  name: "Mark Otto"
-  url: "https://twitter.com/mdo"
+  name: "Jimin"
+  url: "https://github.com/Shypanda0119"
 
 # Pagination
 paginate: 5
 
 # GitHub repo info
 github:
-  repo: "https://github.com/poole/hyde"
+  repo: "https://github.com/Shypanda0119/shypanda0119.github.io"
 
-# Markdown + highlighter (GitHub Pages 공식 지원 조합으로 변경)
+# Markdown + highlighter
 markdown: kramdown
 kramdown:
   input: GFM
 highlighter: rouge
 
-# Permalinks (GitHub Pages에서 지원하는 방식만 사용)
+# Permalinks
 permalink: pretty
-
