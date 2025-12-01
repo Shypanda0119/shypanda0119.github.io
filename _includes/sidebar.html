@@ -1,34 +1,22 @@
 <div class="sidebar">
-  <div class="container sidebar-sticky">
+  <h1 class="sidebar-title">Jimin's Portfolio</h1>
 
-    <!-- Title & Description -->
-    <div class="sidebar-about">
-      <h1>
-        <a href="{{ site.baseurl }}/">
-          {{ site.title }}
-        </a>
-      </h1>
-      <p class="lead">{{ site.tagline }}</p>
-      <p style="font-size: 14px; color:#bdbdbd; margin-top:-10px;">
-        {{ site.description }}
-      </p>
-    </div>
+  <ul class="sidebar-nav">
+    <li><a href="/">Home</a></li>
 
-    <!-- Navigation -->
-    <nav class="sidebar-nav">
-      <a class="sidebar-nav-item{% if page.url == '/' %} active{% endif %}" href="/">Home</a>
+    <li><a href="/techstack.html">Tech Stack</a></li>
 
-      <!-- Manual fixed navigation items -->
-      <a class="sidebar-nav-item" href="/techstack.html">Tech Stack</a>
-      <a class="sidebar-nav-item" href="/#projects">Projects</a>
-      <a class="sidebar-nav-item" href="/#contact">Contact</a>
-      <a class="sidebar-nav-item" href="https://github.com/Shypanda0119">GitHub</a>
-    </nav>
+    <li>
+      Projects
+      <ul>
+        <li><a href="/projects/tabletopia.html">Tabletopia</a></li>
+        <li><a href="/projects/wms.html">WMS</a></li>
+        <li><a href="/projects/mininstagram.html">MiniInstagram</a></li>
+        <li><a href="/projects/peachstore.html">Peach-Store</a></li>
+      </ul>
+    </li>
 
-    <!-- Footer -->
-    <p style="margin-top:20px; font-size:13px; color:#aaa;">
-      &copy; {{ site.time | date: '%Y' }} — Jimin
-    </p>
-
-  </div>
+    <li><a href="/contact.html">Contact</a></li>
+    <li><a href="https://github.com/Shypanda0119" target="_blank">GitHub</a></li>
+  </ul>
 </div>
