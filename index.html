@@ -12,13 +12,33 @@ layout: default
     font-size: 12px;
     margin-right: 6px;
   }
+  .project-card {
+    background: #fafafa;
+    border: 1px solid #eee;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 25px;
+  }
   .project-img {
     width: 100%;
     border-radius: 6px;
-    margin-bottom: 15px;
-    background: #fafafa;
-    padding: 10px;
+    margin-bottom: 10px;
+    background: #fdfdfd;
+    padding: 8px;
     border: 1px solid #eee;
+  }
+  .detail-btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 6px 12px;
+    background: #007acc;
+    color: #fff;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 14px;
+  }
+  .detail-btn:hover {
+    background: #005fa3;
   }
 </style>
 
@@ -28,9 +48,9 @@ layout: default
   <h1>👋 Hi! I'm Jimin</h1>
   <p>
     Java & Spring 기반 백엔드 개발자입니다.<br>
-    실제 프로젝트에서 요구사항을 API와 데이터 흐름으로 구조화하는 역할을 맡아왔습니다.<br>
-    AI 추천 기능, 관리자 페이지 백엔드, 재고 관리, SNS 게시물·댓글 기능 등<br>
-    다양한 서비스의 핵심 기능을 직접 구현한 경험이 있습니다.
+    서비스 흐름을 구조화하고 실제 기능을 구현해보는 데 강점이 있습니다.<br>
+    관리자 페이지 백엔드, 재고 관리, AI 추천 연동 등 다양한 프로젝트에서<br>
+    핵심 기능을 직접 개발한 경험이 있습니다.
   </p>
 
   <hr>
@@ -38,257 +58,33 @@ layout: default
   <!-- TECH STACK -->
   <h2>💡 Tech Stack</h2>
   <ul>
-    <li><strong>Backend:</strong> Java, Spring Boot, Spring MVC, Spring Data JPA</li>
+    <li><strong>Backend:</strong> Java, Spring Boot, Spring MVC, JPA</li>
     <li><strong>Database:</strong> MySQL</li>
-    <li><strong>Tools:</strong> Docker, GitHub Actions, Git</li>
-    <li><strong>Frontend(필요 시 구현):</strong> React, JSP, Bootstrap, Swing(UI 데이터 연동)</li>
+    <li><strong>Tools:</strong> Docker, Git, GitHub Actions, Postman</li>
+    <li><strong>Frontend(필요 시):</strong> React, JSP, Bootstrap, Swing</li>
   </ul>
 
   <hr>
 
-  <h2>🔗 Links</h2>
-  <ul>
-    <li><a href="https://github.com/Shypanda0119">GitHub</a></li>
-  </ul>
-
-  <hr>
-
-  <!-- PROJECTS -->
-  <h2 id="projects">📂 Projects</h2>
-
-
-
+  <h2>📂 Projects</h2>
 
   <!-- Tabletopia -->
-  <div style="margin-bottom: 40px;">
-    <p style="background:#f6f6f6; padding:10px; border-left:4px solid #007acc;">
-      ⭐ 관리자 백엔드 + 지역 기반 추천 + AI 연동을 직접 담당한 메인 프로젝트
-    </p>
-
-    <img src="assets/img/tabletopia.png" alt="Tabletopia" class="project-img">
-
-    <h3>🍽 Tabletopia — 식당 예약 & 관리 플랫폼</h3>
-
-    <div>
-      <span class="tag">Spring Boot</span>
-      <span class="tag">JPA</span>
-      <span class="tag">MySQL</span>
-      <span class="tag">OpenAI API</span>
-      <span class="tag">React Admin</span>
-    </div>
-
-    <p><strong>역할: 관리자 백엔드 API · 지역 판별 로직 · AI 추천 기능 · DB 설계 참여</strong></p>
-
-    <h4>📌 구현 기능</h4>
-
-    <ul>
-      <li><strong>관리자 페이지 백엔드 CRUD 전체 개발</strong>
-        <ul>
-          <li>식당, 메뉴, 운영시간, 편의시설, 이미지, 리뷰(댓글형식) API</li>
-          <li>React Admin 대시보드와 연동</li>
-        </ul>
-      </li>
-
-      <li><strong>지역 기반 추천 로직 개발</strong>
-        <ul>
-          <li>주소 문자열에서 구 단위 추출</li>
-          <li>지역 기반 후보 식당 필터링 로직 직접 구현</li>
-        </ul>
-      </li>
-
-      <li><strong>ChatGPT 기반 식당 추천 기능 구현</strong>
-        <ul>
-          <li>OpenAI API 호출 및 프롬프트 구성</li>
-          <li>응답 파싱 및 예외 처리</li>
-          <li>간단한 대화형 추천(5회 이내)</li>
-        </ul>
-      </li>
-
-      <li><strong>JPA 사용 경험</strong>
-        <ul>
-          <li>N+1 해결을 위해 팀원의 가이드로 fetch join 적용 경험</li>
-          <li>조회 상황에 따라 DTO 기반 조회 방식 사용</li>
-          <li>복잡한 JPQL보다는 Spring Data JPA 쿼리 메서드를 중심으로 개발</li>
-        </ul>
-      </li>
-
-      <li><strong>DB 설계 참여</strong>
-        <ul>
-          <li>식당/메뉴/운영시간/이미지/리뷰 테이블 구조 설계</li>
-          <li>관계(FK) 및 인덱스 설계 일부 참여</li>
-        </ul>
-      </li>
-    </ul>
-
-    <p><a href="https://github.com/Shypanda0119/Tabletopia">🔗 GitHub Repository</a></p>
+  <div class="project-card">
+    <img src="assets/img/tabletopia.png" class="project-img" alt="Tabletopia">
+    <h3>🍽 Tabletopia – 식당 예약 & 관리자 플랫폼</h3>
+    <span class="tag">Spring Boot</span>
+    <span class="tag">JPA</span>
+    <span class="tag">MySQL</span>
+    <span class="tag">OpenAI API</span>
+    <p>관리자 CRUD, 지역 기반 추천, ChatGPT 추천 기능 등 핵심 백엔드 기능을 직접 구현했습니다.</p>
+    <a class="detail-btn" href="/projects/tabletopia.html">상세 보기</a>
   </div>
-
-  <hr>
-
-
-
-
 
   <!-- WMS -->
-  <div style="margin-bottom: 40px;">
-    <p style="background:#f6f6f6; padding:10px; border-left:4px solid #007acc;">
-      ⭐ 실제 물류 흐름 기반 재고·유통기한 처리 경험
-    </p>
-
-    <img src="assets/img/wms.png" alt="Shinlogis WMS" class="project-img">
-
-    <h3>📦 Shinlogis-WMS — 창고관리 시스템</h3>
-
-    <div>
-      <span class="tag">Spring Boot</span>
-      <span class="tag">JPA</span>
-      <span class="tag">MySQL</span>
-      <span class="tag">Swing</span>
-    </div>
-
-    <p><strong>역할: 재고 흐름 처리 · 유통기한/파손 구분 · 대시보드 API · DB 설계</strong></p>
-
-    <h4>📌 구현 기능</h4>
-
-    <ul>
-      <li><strong>재고 흐름 처리</strong>
-        <ul>
-          <li>출고·폐기 요청 시 재고 차감 로직 처리</li>
-          <li>유통기한 경과/임박/파손 상태 자동 분류</li>
-        </ul>
-      </li>
-
-      <li><strong>대시보드용 통계 API 개발</strong>
-        <ul>
-          <li>입·출고 수량 합계 계산</li>
-          <li>현재 재고 상태 요약(정상/임박/파손)</li>
-          <li>Swing UI가 사용하는 데이터 제공</li>
-        </ul>
-      </li>
-
-      <li><strong>DB 설계</strong>
-        <ul>
-          <li>재고·입고·출고·폐기 테이블 구조 설계 참여</li>
-          <li>상태값(enum) 기반 관리 구조 설계</li>
-        </ul>
-      </li>
-    </ul>
-
-    <p><a href="https://github.com/zero5ive/Shinlogis-WMS">🔗 GitHub Repository</a></p>
-  </div>
-
-  <hr>
-
-
-
-
-
-  <!-- MiniInstagram -->
-  <div style="margin-bottom: 40px;">
-    <p style="background:#f6f6f6; padding:10px; border-left:4px solid #007acc;">
-      ⭐ Firebase 기반 SNS 기본 기능 구현
-    </p>
-
-    <img src="assets/img/mininstagram.png" alt="MiniInstagram" class="project-img">
-
-    <h3>📸 MiniInstagram — 미니 SNS 서비스</h3>
-
-    <div>
-      <span class="tag">Spring Boot</span>
-      <span class="tag">Firebase Auth</span>
-      <span class="tag">Airtable</span>
-    </div>
-
-    <p><strong>역할: 게시물/댓글 기능 · 이미지 업로드 · Firebase 인증 연동</strong></p>
-
-    <h4>📌 구현 기능</h4>
-
-    <ul>
-      <li><strong>인증</strong>
-        <ul>
-          <li>Firebase Auth 기반 로그인/회원관리</li>
-          <li>JWT 인증·인가 구현 없음</li>
-        </ul>
-      </li>
-
-      <li><strong>게시물 기능</strong>
-        <ul>
-          <li>전체 게시물 조회</li>
-          <li>로그인한 사용자 게시물 조회</li>
-          <li>게시물 작성 / 이미지 업로드 처리</li>
-        </ul>
-      </li>
-
-      <li><strong>댓글 기능</strong>
-        <ul>
-          <li>댓글 등록</li>
-          <li>댓글 조회</li>
-          <li>댓글 수정</li>
-          <li>댓글 삭제</li>
-        </ul>
-      </li>
-    </ul>
-
-    <p><a href="https://github.com/Shypanda0119/MiniInstagram">🔗 GitHub Repository</a></p>
-  </div>
-
-  <hr>
-
-
-
-
-
-  <!-- Peach Store -->
-  <div style="margin-bottom: 40px;">
-    <p style="background:#f6f6f6; padding:10px; border-left:4px solid #007acc;">
-      ⭐ 전자기기 옵션 조합 및 재고 처리 중심 개발
-    </p>
-
-    <img src="assets/img/peachstore.png" alt="Peach Store" class="project-img">
-
-    <h3>🛒 Peach-Store — 전자기기 커머스 플랫폼</h3>
-
-    <div>
-      <span class="tag">Spring MVC</span>
-      <span class="tag">JSP</span>
-      <span class="tag">Bootstrap</span>
-      <span class="tag">MySQL</span>
-    </div>
-
-    <p><strong>역할: 옵션 조합 로직 · 재고 차감 로직 · 상품 상세 API</strong></p>
-
-    <h4>📌 구현 기능</h4>
-
-    <ul>
-      <li><strong>상품 옵션 처리</strong>
-        <ul>
-          <li>기종/색상/용량 옵션 구조 설계</li>
-          <li>옵션 조합 기반 상품 조회 및 필터링</li>
-        </ul>
-      </li>
-
-      <li><strong>재고 처리</strong>
-        <ul>
-          <li>사용자 선택 → 해당 옵션 재고 차감 로직 개발</li>
-          <li>재고 소진 시 처리 로직 구현</li>
-        </ul>
-      </li>
-
-      <li><strong>DB 설계</strong>
-        <ul>
-          <li>상품/옵션/재고 테이블 구조 설계 참여</li>
-        </ul>
-      </li>
-    </ul>
-
-    <p><a href="https://github.com/zero5ive/Peach-Store">🔗 GitHub Repository</a></p>
-  </div>
-
-  <hr>
-
-  <h2 id="contact">📬 Contact</h2>
-  <p>
-    Email: <a href="mailto:kmkm7936@gmail.com">kmkm7936@gmail.com</a><br>
-  </p>
-
-</div>
+  <div class="project-card">
+    <img src="assets/img/wms.png" class="project-img" alt="WMS">
+    <h3>📦 Shinlogis-WMS – 창고 관리 시스템</h3>
+    <span class="tag">Spring Boot</span>
+    <span class="tag">MySQL</span>
+    <span class="tag">Swing</span>
+    <p>유통기한/파손 분류, 재고 차감, 대시보드
