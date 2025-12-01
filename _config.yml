@@ -25,5 +25,3 @@ kramdown:
   input: GFM
 highlighter: rouge
 
-# Permalinks
-permalink: pretty
