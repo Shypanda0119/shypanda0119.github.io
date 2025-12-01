@@ -1,64 +1,67 @@
 ---
 layout: default
-title: MiniInstagram 상세
 ---
 
 <div class="page">
+  <div class="project-card">
 
-<h1>📸 MiniInstagram – SNS 서비스</h1>
-<p>게시물/댓글 기능 · 이미지 업로드 · Firebase 인증</p>
+    <img src="/assets/img/mininstagram.png" class="project-img">
 
-<hr>
+    <h1>📸 MiniInstagram — 미니 SNS 서비스</h1>
 
-<h2>📌 프로젝트 개요</h2>
-<p>
-MiniInstagram은 Firebase 인증을 사용한 간단 SNS 프로젝트입니다.  
-게시물 작성/조회와 댓글 CRUD, 이미지 업로드 기능을 직접 구현했습니다.
-</p>
+    <div>
+      <span class="tag">Spring Boot</span>
+      <span class="tag">Firebase Auth</span>
+      <span class="tag">Airtable</span>
+    </div>
 
-<hr>
+    <h2>📌 프로젝트 개요</h2>
+    <p>
+      사용자가 사진을 올리고 댓글을 남길 수 있는 간단한 SNS 서비스입니다.
+      JWT 인증 대신 Firebase 인증을 사용하여 로그인/회원 관리를 구현했습니다.
+    </p>
 
-<h2>🛠 기술 스택</h2>
-<ul>
-  <li>Backend: Spring Boot</li>
-  <li>Auth: Firebase Auth</li>
-  <li>Database: Airtable</li>
-  <li>Storage: Firebase Storage (이미지)</li>
-</ul>
+    <h2>📌 담당 역할 (My Role)</h2>
+    <ul>
+      <li>Firebase 인증 연동</li>
+      <li>게시물 CRUD + 이미지 업로드</li>
+      <li>댓글 CRUD 전체 기능 구현</li>
+      <li>사용자별 게시물 구분 로직</li>
+    </ul>
 
-<hr>
+    <h2>📌 구현 기능 상세</h2>
 
-<h2>🎯 담당 역할</h2>
+    <h3>① 인증</h3>
+    <ul>
+      <li>Firebase Auth 기반 로그인/회원가입</li>
+      <li>JWT·Spring Security 사용 없음</li>
+    </ul>
 
-<h3>1) 인증</h3>
-<ul>
-  <li>Firebase Auth 기반 로그인/회원 관리</li>
-  <li>JWT 인증은 사용하지 않음</li>
-</ul>
+    <h3>② 게시물 기능</h3>
+    <ul>
+      <li>전체 게시물 조회</li>
+      <li>본인 게시물만 조회하는 기능</li>
+      <li>이미지 업로드 + 게시물 등록</li>
+    </ul>
 
-<h3>2) 게시물 기능</h3>
-<ul>
-  <li>게시물 작성</li>
-  <li>전체 게시물 조회</li>
-  <li>로그인 사용자의 게시물 조회</li>
-  <li>이미지 업로드</li>
-</ul>
+    <h3>③ 댓글 기능</h3>
+    <ul>
+      <li>댓글 등록/조회/수정/삭제 기능 구현</li>
+      <li>게시물 상세화면에서 댓글 목록 제공</li>
+    </ul>
 
-<h3>3) 댓글 기능</h3>
-<ul>
-  <li>댓글 등록</li>
-  <li>댓글 조회</li>
-  <li>댓글 수정</li>
-  <li>댓글 삭제</li>
-</ul>
+    <h2>📌 기술적 문제 & 해결</h2>
+    <ul>
+      <li>이미지 업로드 시 용량 제한 → 용량 필터링 추가</li>
+      <li>Airtable API의 필드 제한 → 컬럼 분리하여 해결</li>
+    </ul>
 
-<hr>
+    <h2>📌 결과</h2>
+    <p>
+      인증 기반 SNS 기본 기능을 구축하며 API 설계와 데이터 흐름에 대한 경험을 쌓았습니다.
+    </p>
 
-<h2>📎 GitHub Link</h2>
-<p>
-<a href="https://github.com/Shypanda0119/MiniInstagram" target="_blank">
-  🔗 https://github.com/Shypanda0119/MiniInstagram
-</a>
-</p>
+    <a href="https://github.com/Shypanda0119/MiniInstagram" class="detail-btn">GitHub Repository</a>
 
+  </div>
 </div>
