@@ -1,15 +1,149 @@
-<!DOCTYPE html>
-<html lang="en-us">
+<style>
+  /* ====== Blue Monotone 전체 테마 ====== */
 
-  {% include head.html %}
+  /* 전체 폰트 */
+  body {
+    font-family: 'Inter', 'Pretendard', sans-serif;
+    background: #ffffff;
+    margin: 0;
+  }
 
-  <body>
+  /* ====== Sidebar ====== */
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 265px;
+    height: 100vh;
+    background: #111827; /* 네이비 블랙 */
+    color: #E5E7EB;
+    padding: 30px 22px;
+    overflow-y: auto;
+    box-shadow: 2px 0 10px rgba(0,0,0,0.15);
+  }
 
-    {% include sidebar.html %}
+  .sidebar-header h1 {
+    margin: 0;
+    font-size: 22px;
+    font-weight: 700;
+    color: #fff;
+  }
 
-    <div class="content container">
-      {{ content }}
-    </div>
+  .subtitle {
+    margin-top: 4px;
+    font-size: 13px;
+    color: #9CA3AF;
+  }
 
-  </body>
-</html>
+  /* 메뉴 */
+  .menu {
+    list-style: none;
+    margin-top: 30px;
+    padding: 0;
+  }
+
+  .menu a {
+    display: block;
+    padding: 10px 12px;
+    text-decoration: none;
+    color: #E5E7EB;
+    border-radius: 8px;
+    font-size: 15px;
+    transition: all 0.2s;
+  }
+
+  .menu a:hover {
+    background: #1f2937;
+    color: #3B82F6; /* 메인 파란색 */
+    transform: translateX(4px);
+  }
+
+  .menu-group .menu-title {
+    padding-left: 4px;
+    color: #9CA3AF;
+    font-size: 14px;
+    margin-bottom: 6px;
+  }
+
+  .submenu {
+    list-style: none;
+    padding-left: 12px;
+    margin-bottom: 6px;
+  }
+
+  .submenu a {
+    color: #D1D5DB;
+    padding: 8px 12px;
+    font-size: 14px;
+  }
+
+  .submenu a:hover {
+    background: #1f2937;
+    color: #60A5FA;
+  }
+
+  /* ====== 본문 영역 ====== */
+  .page {
+    margin-left: 285px;
+    padding: 40px 40px;
+  }
+
+  /* 제목 스타일 */
+  h1, h2, h3 {
+    color: #111827;
+  }
+
+  /* 프로젝트 카드 */
+  .project-card {
+    max-width: 850px;
+    margin: 0 auto 40px;
+    background: #ffffff;
+    border: 1px solid rgba(17,24,39,0.08);
+    padding: 28px;
+    border-radius: 14px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    transition: all 0.2s;
+  }
+
+  .project-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  }
+
+  /* 프로젝트 이미지 */
+  .project-img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 18px;
+  }
+
+  /* 블루 버튼 */
+  .detail-btn {
+    display: inline-block;
+    margin-top: 12px;
+    padding: 10px 18px;
+    background: #3B82F6;
+    color: white;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.2s;
+  }
+
+  .detail-btn:hover {
+    background: #2563EB;
+  }
+
+  /* 태그 */
+  .tag {
+    display: inline-block;
+    background: #E0E7FF;
+    color: #1E3A8A;
+    padding: 5px 10px;
+    font-size: 12px;
+    border-radius: 8px;
+    margin-right: 6px;
+    margin-bottom: 6px;
+  }
+  
+</style>
