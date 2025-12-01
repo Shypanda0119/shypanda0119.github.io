@@ -1,82 +1,71 @@
 ---
 layout: default
-title: Tabletopia 프로젝트 상세
 ---
 
 <div class="page">
 
-<h1>🍽 Tabletopia – 식당 예약 & 관리자 플랫폼</h1>
-<p>관리자 페이지 백엔드 · AI 추천 · 지역 기반 식당 추천 · DB 설계 참여</p>
+  <div class="project-card">
 
-<hr>
+    <img src="/assets/img/tabletopia.png" class="project-img">
 
-<h2>📌 프로젝트 개요</h2>
-<p>
-Tabletopia는 전국 식당 정보를 기반으로 한 <strong>관리자 중심의 식당 관리·예약 플랫폼</strong>입니다.  
-React 기반 관리자 페이지와 Spring Boot 기반 백엔드 서버로 구성되어 있으며,  
-관리자 CRUD, 지역 기반 추천, ChatGPT 기반 간단 추천 등 핵심 기능을 직접 구현했습니다.
-</p>
+    <h1>🍽 Tabletopia — 식당 예약 & 관리 플랫폼</h1>
 
-<hr>
+    <div>
+      <span class="tag">Spring Boot</span>
+      <span class="tag">JPA</span>
+      <span class="tag">MySQL</span>
+      <span class="tag">OpenAI API</span>
+      <span class="tag">React Admin</span>
+    </div>
 
-<h2>🛠 기술 스택</h2>
-<ul>
-  <li>Backend: Spring Boot, Spring MVC, Spring Data JPA</li>
-  <li>Database: MySQL</li>
-  <li>Tools: Docker, Git, GitHub Actions, Postman</li>
-  <li>AI: OpenAI API(ChatGPT 연동)</li>
-</ul>
+    <h3>📌 역할 (My Role)</h3>
+    <p>
+      관리자 백엔드 개발 · 지역 판별 로직 개발 · AI 추천 기능 · DB 설계 참여
+    </p>
 
-<hr>
+    <h3>📌 주요 구현 기능</h3>
 
-<h2>🎯 담당 역할</h2>
+    <ul>
+      <li><strong>관리자 백엔드 CRUD</strong>
+        <ul>
+          <li>식당, 메뉴, 운영시간, 이미지, 편의시설, 리뷰(댓글형식) API</li>
+          <li>React Admin과 연동되는 데이터 구조 설계</li>
+        </ul>
+      </li>
 
-<h3>1) 관리자 페이지 백엔드 CRUD 전체 개발</h3>
-<ul>
-  <li>식당 CRUD</li>
-  <li>메뉴 CRUD</li>
-  <li>운영시간 CRUD</li>
-  <li>편의시설 CRUD</li>
-  <li>이미지 업로드 API</li>
-  <li>리뷰(댓글) CRUD</li>
-  <li>React Admin과 API 연동</li>
-</ul>
+      <li><strong>지역 기반 추천 로직</strong>
+        <ul>
+          <li>주소 문자열에서 "구" 단위 추출 로직 구현</li>
+          <li>지역별 식당 필터링 알고리즘 작성</li>
+        </ul>
+      </li>
 
-<h3>2) 지역 기반 추천 로직 개발</h3>
-<ul>
-  <li>주소 문자열에서 “구 단위” 추출</li>
-  <li>지역 필터링으로 후보 식당 리스트 구성</li>
-  <li>DB 기반 지역별 식당 추천 데이터 생성</li>
-</ul>
+      <li><strong>ChatGPT 기반 추천 기능</strong>
+        <ul>
+          <li>OpenAI API 요청/응답 파싱</li>
+          <li>5회 제한 간단 대화형 추천 기능</li>
+        </ul>
+      </li>
 
-<h3>3) ChatGPT 기반 추천 기능 개발</h3>
-<ul>
-  <li>OpenAI API 연동</li>
-  <li>프롬프트 구성</li>
-  <li>응답 파싱 로직 개발</li>
-  <li>간단한 5턴 내외 대화형 추천 기능</li>
-</ul>
+      <li><strong>JPA 사용</strong>
+        <ul>
+          <li>fetch join 적용 경험(N+1 해결)</li>
+          <li>DTO 기반 조회 중심</li>
+        </ul>
+      </li>
 
-<h3>4) JPA 사용 경험</h3>
-<ul>
-  <li>쿼리 최적화 필요 시 fetch join 적용 경험</li>
-  <li>DTO 기반 조회 방식 적용</li>
-  <li>JPQL보다는 Spring Data JPA 중심 개발</li>
-</ul>
+      <li><strong>DB 설계</strong>
+        <ul>
+          <li>식당/메뉴/운영시간/이미지/리뷰 테이블 설계</li>
+        </ul>
+      </li>
+    </ul>
 
-<h3>5) DB 설계 참여</h3>
-<ul>
-  <li>식당/메뉴/운영시간/이미지/리뷰 테이블 구조</li>
-  <li>관계(FK) 및 기본 인덱스 설계</li>
-</ul>
+    <h3>📌 결과</h3>
+    <p>
+      관리자 페이지와 실시간 추천 기능이 완성되며 서비스 구조가 명확해졌고, 실제 식당 관리/추천 시나리오를 백엔드에서 완전하게 동작시킴.
+    </p>
 
-<hr>
-
-<h2>📎 GitHub Link</h2>
-<p>
-<a href="https://github.com/Shypanda0119/Tabletopia" target="_blank">
-  🔗 https://github.com/Shypanda0119/Tabletopia
-</a>
-</p>
-
+    <a href="https://github.com/Shypanda0119/Tabletopia" class="detail-btn">GitHub Repository</a>
+  </div>
 </div>
