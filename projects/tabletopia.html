@@ -3,7 +3,6 @@ layout: default
 ---
 
 <div class="page">
-
   <div class="project-card">
 
     <img src="/assets/img/tabletopia.png" class="project-img">
@@ -12,58 +11,81 @@ layout: default
 
     <div>
       <span class="tag">Spring Boot</span>
+      <span class="tag">Spring MVC</span>
       <span class="tag">JPA</span>
       <span class="tag">MySQL</span>
       <span class="tag">OpenAI API</span>
       <span class="tag">React Admin</span>
     </div>
 
-    <h3>📌 역할 (My Role)</h3>
+    <h2>📌 프로젝트 개요</h2>
     <p>
-      관리자 백엔드 개발 · 지역 판별 로직 개발 · AI 추천 기능 · DB 설계 참여
+      식당 예약·웨이팅·메뉴 관리·운영시간 등 식당 운영에 필요한 기능을 제공하는 서비스입니다.
+      저는 이 프로젝트에서 <strong>관리자 백엔드 전체 개발</strong>과
+      <strong>지역 기반 추천 로직 · AI 추천 기능</strong>을 담당했습니다.
     </p>
 
-    <h3>📌 주요 구현 기능</h3>
-
+    <h2>📌 담당 역할 (My Role)</h2>
     <ul>
-      <li><strong>관리자 백엔드 CRUD</strong>
-        <ul>
-          <li>식당, 메뉴, 운영시간, 이미지, 편의시설, 리뷰(댓글형식) API</li>
-          <li>React Admin과 연동되는 데이터 구조 설계</li>
-        </ul>
-      </li>
-
-      <li><strong>지역 기반 추천 로직</strong>
-        <ul>
-          <li>주소 문자열에서 "구" 단위 추출 로직 구현</li>
-          <li>지역별 식당 필터링 알고리즘 작성</li>
-        </ul>
-      </li>
-
-      <li><strong>ChatGPT 기반 추천 기능</strong>
-        <ul>
-          <li>OpenAI API 요청/응답 파싱</li>
-          <li>5회 제한 간단 대화형 추천 기능</li>
-        </ul>
-      </li>
-
-      <li><strong>JPA 사용</strong>
-        <ul>
-          <li>fetch join 적용 경험(N+1 해결)</li>
-          <li>DTO 기반 조회 중심</li>
-        </ul>
-      </li>
-
-      <li><strong>DB 설계</strong>
-        <ul>
-          <li>식당/메뉴/운영시간/이미지/리뷰 테이블 설계</li>
-        </ul>
-      </li>
+      <li>관리자 페이지 백엔드 CRUD 전체 개발</li>
+      <li>지역 기반 식당 추천 로직 직접 구현</li>
+      <li>OpenAI API 기반 AI 추천 기능 개발</li>
+      <li>DB 테이블 구조 설계 참여</li>
+      <li>JPA 기반 조회 최적화(fech join 가이드 적용)</li>
     </ul>
 
-    <h3>📌 결과</h3>
+    <h2>📌 구현 기능 상세</h2>
+
+    <h3>① 관리자 페이지 CRUD 전체 개발</h3>
+    <ul>
+      <li>식당 등록/수정/삭제</li>
+      <li>메뉴·운영시간·이미지·편의시설·리뷰 관리 API</li>
+      <li>React Admin에서 바로 쓸 수 있도록 JSON 구조 정리</li>
+      <li>수정/삭제 시 연관 데이터(메뉴·이미지 등) 처리</li>
+    </ul>
+
+    <h3>② 지역 기반 추천 로직 개발</h3>
     <p>
-      관리자 페이지와 실시간 추천 기능이 완성되며 서비스 구조가 명확해졌고, 실제 식당 관리/추천 시나리오를 백엔드에서 완전하게 동작시킴.
+      사용자가 "강남 맛집 추천" → Chatbot → 지역 기반 후보 뽑는 구조를 만들었습니다.
+    </p>
+    <ul>
+      <li>주소에서 “OO구” 텍스트만 추출하는 파싱 기능</li>
+      <li>해당 지역 식당만 필터링하는 1차 로직 직접 구현</li>
+      <li>카테고리·평점 기준으로 후보 정리</li>
+    </ul>
+
+    <h3>③ ChatGPT 기반 추천 기능</h3>
+    <ul>
+      <li>OpenAI Chat Completions API 호출</li>
+      <li>프롬프트 구조 설계 (지역/메뉴/식당 리스트 전달)</li>
+      <li>응답 중에서 식당명 추출하는 파싱 처리</li>
+      <li>5회 이내 대화 제공(간단한 대화형 챗봇)</li>
+      <li>예외 발생 시 fallback 응답 제공</li>
+    </ul>
+
+    <h3>④ JPA 기반 조회 최적화</h3>
+    <ul>
+      <li>N+1 문제 발생 구간에서 fetch join 사용</li>
+      <li>필요한 경우 DTO를 사용하여 필요한 값만 조회</li>
+    </ul>
+
+    <h3>⑤ DB 설계 참여</h3>
+    <ul>
+      <li>Restaurant, Menu, OpeningHour, Image, Facility, Review 테이블 구조 구성</li>
+      <li>관계(FK) 설정 및 인덱스 설계 일부 참여</li>
+    </ul>
+
+    <h2>📌 기술적 문제 & 해결 과정</h2>
+    <ul>
+      <li>GPT 응답이 일정하지 않아 정규식으로 식당명 파싱 → 해결</li>
+      <li>React Admin에서 PUT → PATCH 문제 대응을 위해 요청 구조 조정</li>
+      <li>운영시간 복수 등록 시 트랜잭션 처리 구현</li>
+    </ul>
+
+    <h2>📌 결과</h2>
+    <p>
+      지역 기반 추천 + AI 추천 + 관리자 기능까지 백엔드 핵심 구조를 완성했고,
+      실제로 작동하는 레스토랑 관리·추천 플랫폼 백엔드를 구축했습니다.
     </p>
 
     <a href="https://github.com/Shypanda0119/Tabletopia" class="detail-btn">GitHub Repository</a>
