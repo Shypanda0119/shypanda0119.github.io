@@ -3,42 +3,75 @@ layout: default
 ---
 
 <style>
+  /* 전체 영역 여백 정리 */
+  .page {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  /* 태그 스타일 */
   .tag {
     display: inline-block;
-    background: #e8e8e8;
-    color: #555;
-    padding: 3px 8px;
-    border-radius: 6px;
+    background: #eef2f5;
+    color: #444;
+    padding: 5px 10px;
+    border-radius: 8px;
     font-size: 12px;
     margin-right: 6px;
+    margin-bottom: 6px;
   }
+
+  /* 프로젝트 카드 */
   .project-card {
-    background: #fafafa;
-    border: 1px solid #eee;
-    padding: 15px;
-    border-radius: 8px;
-    margin-bottom: 25px;
+    max-width: 850px;
+    margin: 0 auto 40px auto;
+    background: #ffffff;
+    border: 1px solid #e4e8eb;
+    padding: 28px;
+    border-radius: 14px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    transition: all 0.2s ease;
   }
+
+  .project-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  }
+
+  /* 프로젝트 이미지 */
   .project-img {
     width: 100%;
-    border-radius: 6px;
-    margin-bottom: 10px;
-    background: #fdfdfd;
-    padding: 8px;
-    border: 1px solid #eee;
+    border-radius: 12px;
+    margin-bottom: 15px;
   }
+
+  /* 상세보기 버튼 */
   .detail-btn {
     display: inline-block;
-    margin-top: 10px;
-    padding: 6px 12px;
+    margin-top: 12px;
+    padding: 9px 16px;
     background: #007acc;
-    color: #fff;
-    border-radius: 6px;
+    color: white;
+    border-radius: 8px;
     text-decoration: none;
     font-size: 14px;
+    font-weight: 600;
+    transition: background 0.2s;
   }
   .detail-btn:hover {
-    background: #005fa3;
+    background: #005da3;
+  }
+
+  /* 섹션 라인 */
+  h2 {
+    margin-top: 40px;
+    margin-bottom: 20px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #f0f0f0;
+  }
+
+  p {
+    line-height: 1.6;
   }
 </style>
 
@@ -48,9 +81,9 @@ layout: default
   <h1>👋 Hi! I'm Jimin</h1>
   <p>
     Java & Spring 기반 백엔드 개발자입니다.<br>
-    서비스 흐름을 구조화하고 실제 기능을 구현해보는 데 강점이 있습니다.<br>
-    관리자 페이지 백엔드, 재고 관리, AI 추천 연동 등 다양한 프로젝트에서<br>
-    핵심 기능을 직접 개발한 경험이 있습니다.
+    실제 프로젝트에서 요구사항을 API와 데이터 흐름으로 구조화하는 역할을 맡아왔습니다.<br>
+    AI 추천 기능, 관리자 페이지 백엔드, 재고 관리, SNS 게시물·댓글 기능 등<br>
+    다양한 서비스의 핵심 기능을 직접 구현한 경험이 있습니다.
   </p>
 
   <hr>
@@ -58,33 +91,217 @@ layout: default
   <!-- TECH STACK -->
   <h2>💡 Tech Stack</h2>
   <ul>
-    <li><strong>Backend:</strong> Java, Spring Boot, Spring MVC, JPA</li>
+    <li><strong>Backend:</strong> Java, Spring Boot, Spring MVC, Spring Data JPA</li>
     <li><strong>Database:</strong> MySQL</li>
-    <li><strong>Tools:</strong> Docker, Git, GitHub Actions, Postman</li>
-    <li><strong>Frontend(필요 시):</strong> React, JSP, Bootstrap, Swing</li>
+    <li><strong>Tools:</strong> Docker, GitHub Actions, Git</li>
+    <li><strong>Frontend(필요 시 구현):</strong> React, JSP, Bootstrap, Swing</li>
   </ul>
 
   <hr>
 
-  <h2>📂 Projects</h2>
+  <h2>🔗 Links</h2>
+  <ul>
+    <li><a href="https://github.com/Shypanda0119">GitHub</a></li>
+  </ul>
+
+  <hr>
+
+  <!-- PROJECTS -->
+  <h2 id="projects">📂 Projects</h2>
+
+
 
   <!-- Tabletopia -->
   <div class="project-card">
-    <img src="assets/img/tabletopia.png" class="project-img" alt="Tabletopia">
-    <h3>🍽 Tabletopia – 식당 예약 & 관리자 플랫폼</h3>
-    <span class="tag">Spring Boot</span>
-    <span class="tag">JPA</span>
-    <span class="tag">MySQL</span>
-    <span class="tag">OpenAI API</span>
-    <p>관리자 CRUD, 지역 기반 추천, ChatGPT 추천 기능 등 핵심 백엔드 기능을 직접 구현했습니다.</p>
-    <a class="detail-btn" href="/projects/tabletopia.html">상세 보기</a>
+    <img src="assets/img/tabletopia.png" alt="Tabletopia" class="project-img">
+
+    <h3>🍽 Tabletopia — 식당 예약 & 관리 플랫폼</h3>
+
+    <div>
+      <span class="tag">Spring Boot</span>
+      <span class="tag">JPA</span>
+      <span class="tag">MySQL</span>
+      <span class="tag">OpenAI API</span>
+      <span class="tag">React Admin</span>
+    </div>
+
+    <p><strong>역할: 관리자 백엔드 API · 지역 판별 로직 · AI 추천 기능 · DB 설계 참여</strong></p>
+
+    <h4>📌 구현 기능</h4>
+    <ul>
+      <li><strong>관리자 페이지 백엔드 CRUD 전체 개발</strong>
+        <ul>
+          <li>식당, 메뉴, 운영시간, 편의시설, 이미지, 리뷰(댓글 형태) API</li>
+          <li>React Admin 대시보드와 연동</li>
+        </ul>
+      </li>
+
+      <li><strong>지역 기반 추천 로직</strong>
+        <ul>
+          <li>주소 문자열에서 ‘구’ 단위 추출</li>
+          <li>지역 기반 식당 후보 필터링</li>
+        </ul>
+      </li>
+
+      <li><strong>ChatGPT 기반 식당 추천 기능</strong>
+        <ul>
+          <li>OpenAI API 활용</li>
+          <li>프롬프트 구성, 응답 파싱</li>
+          <li>간단한 1:1 대화형 추천 기능</li>
+        </ul>
+      </li>
+
+      <li><strong>JPA 사용 경험</strong>
+        <ul>
+          <li>N+1 해결을 위해 fetch join 적용 경험</li>
+          <li>DTO 기반 조회 중심</li>
+        </ul>
+      </li>
+
+      <li><strong>DB 설계 참여</strong>
+        <ul>
+          <li>식당/메뉴/운영시간/이미지/리뷰 테이블 설계</li>
+        </ul>
+      </li>
+    </ul>
+
+    <a href="https://github.com/Shypanda0119/Tabletopia" class="detail-btn">GitHub 보기</a>
   </div>
+
+
 
   <!-- WMS -->
   <div class="project-card">
-    <img src="assets/img/wms.png" class="project-img" alt="WMS">
-    <h3>📦 Shinlogis-WMS – 창고 관리 시스템</h3>
-    <span class="tag">Spring Boot</span>
-    <span class="tag">MySQL</span>
-    <span class="tag">Swing</span>
-    <p>유통기한/파손 분류, 재고 차감, 대시보드
+    <img src="assets/img/wms.png" alt="Shinlogis WMS" class="project-img">
+
+    <h3>📦 Shinlogis-WMS — 창고관리 시스템</h3>
+
+    <div>
+      <span class="tag">Spring Boot</span>
+      <span class="tag">JPA</span>
+      <span class="tag">MySQL</span>
+      <span class="tag">Swing</span>
+    </div>
+
+    <p><strong>역할: 재고 흐름 처리 · 유통기한/파손 구분 · 대시보드 API 개발</strong></p>
+
+    <h4>📌 구현 기능</h4>
+    <ul>
+      <li><strong>재고 흐름 처리</strong>
+        <ul>
+          <li>출고/폐기 요청 시 재고 차감</li>
+          <li>유통기한 경과/임박/정상 상태 분류</li>
+        </ul>
+      </li>
+
+      <li><strong>대시보드 API</strong>
+        <ul>
+          <li>입/출고 통계</li>
+          <li>전체 재고 상태 요약</li>
+        </ul>
+      </li>
+
+      <li><strong>DB 설계 참여</strong>
+        <ul>
+          <li>재고/입고/출고/폐기 테이블 구조 설계</li>
+        </ul>
+      </li>
+    </ul>
+
+    <a href="https://github.com/zero5ive/Shinlogis-WMS" class="detail-btn">GitHub 보기</a>
+  </div>
+
+
+
+  <!-- MiniInstagram -->
+  <div class="project-card">
+    <img src="assets/img/mininstagram.png" alt="MiniInstagram" class="project-img">
+
+    <h3>📸 MiniInstagram — 미니 SNS 서비스</h3>
+
+    <div>
+      <span class="tag">Spring Boot</span>
+      <span class="tag">Firebase Auth</span>
+      <span class="tag">Airtable</span>
+    </div>
+
+    <p><strong>역할: 게시물/댓글 · 이미지 업로드 · Firebase 인증 연동</strong></p>
+
+    <h4>📌 구현 기능</h4>
+    <ul>
+      <li><strong>인증</strong>
+        <ul>
+          <li>Firebase 로그인/회원관리</li>
+          <li>JWT 미사용</li>
+        </ul>
+      </li>
+
+      <li><strong>게시물</strong>
+        <ul>
+          <li>전체 게시물 조회</li>
+          <li>본인 게시물 조회</li>
+          <li>게시물 작성 + 이미지 업로드</li>
+        </ul>
+      </li>
+
+      <li><strong>댓글</strong>
+        <ul>
+          <li>댓글 CRUD 전체 기능</li>
+        </ul>
+      </li>
+    </ul>
+
+    <a href="https://github.com/Shypanda0119/MiniInstagram" class="detail-btn">GitHub 보기</a>
+  </div>
+
+
+
+  <!-- Peach Store -->
+  <div class="project-card">
+    <img src="assets/img/peachstore.png" alt="Peach Store" class="project-img">
+
+    <h3>🛒 Peach-Store — 전자기기 커머스 플랫폼</h3>
+
+    <div>
+      <span class="tag">Spring MVC</span>
+      <span class="tag">JSP</span>
+      <span class="tag">Bootstrap</span>
+      <span class="tag">MySQL</span>
+    </div>
+
+    <p><strong>역할: 옵션 조합 로직 · 재고 차감 로직 · 상품 상세 데이터 제공</strong></p>
+
+    <h4>📌 구현 기능</h4>
+    <ul>
+      <li><strong>상품 옵션 조합 처리</strong>
+        <ul>
+          <li>기종/색상/용량 옵션 조합 설계</li>
+          <li>옵션별 상품 조회 필터링</li>
+        </ul>
+      </li>
+
+      <li><strong>재고 처리</strong>
+        <ul>
+          <li>사용자 선택 옵션 → 재고 차감</li>
+        </ul>
+      </li>
+
+      <li><strong>DB 설계 참여</strong>
+        <ul>
+          <li>상품/옵션/재고 테이블 설계</li>
+        </ul>
+      </li>
+    </ul>
+
+    <a href="https://github.com/zero5ive/Peach-Store" class="detail-btn">GitHub 보기</a>
+  </div>
+
+
+  <hr>
+
+  <h2 id="contact">📬 Contact</h2>
+  <p>
+    Email: <a href="mailto:kmkm7936@gmail.com">kmkm7936@gmail.com</a>
+  </p>
+
+</div>
