@@ -1,0 +1,34 @@
+<div class="sidebar">
+  <div class="container sidebar-sticky">
+
+    <!-- Title & Description -->
+    <div class="sidebar-about">
+      <h1>
+        <a href="{{ site.baseurl }}/">
+          {{ site.title }}
+        </a>
+      </h1>
+      <p class="lead">{{ site.tagline }}</p>
+      <p style="font-size: 14px; color:#bdbdbd; margin-top:-10px;">
+        {{ site.description }}
+      </p>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="sidebar-nav">
+      <a class="sidebar-nav-item{% if page.url == '/' %} active{% endif %}" href="/">Home</a>
+
+      <!-- Manual fixed navigation items -->
+      <a class="sidebar-nav-item" href="/techstack.html">Tech Stack</a>
+      <a class="sidebar-nav-item" href="/#projects">Projects</a>
+      <a class="sidebar-nav-item" href="/#contact">Contact</a>
+      <a class="sidebar-nav-item" href="https://github.com/Shypanda0119">GitHub</a>
+    </nav>
+
+    <!-- Footer -->
+    <p style="margin-top:20px; font-size:13px; color:#aaa;">
+      &copy; {{ site.time | date: '%Y' }} — Jimin
+    </p>
+
+  </div>
+</div>

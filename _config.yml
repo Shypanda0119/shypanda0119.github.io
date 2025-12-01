@@ -1,0 +1,29 @@
+# Theme
+remote_theme: "poole/hyde"
+
+# Setup
+title: "Jimin's Portfolio"
+tagline: "Backend Developer"
+description: "Java · Spring Boot · MySQL · Docker"
+url: "https://shypanda0119.github.io"
+baseurl: ""
+
+author:
+  name: "Jimin"
+  url: "https://github.com/Shypanda0119"
+
+# Pagination
+paginate: 5
+
+# GitHub repo info
+github:
+  repo: "https://github.com/Shypanda0119/shypanda0119.github.io"
+
+# Markdown + highlighter
+markdown: kramdown
+kramdown:
+  input: GFM
+highlighter: rouge
+
+# Permalinks
+permalink: pretty
