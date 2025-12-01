@@ -1,58 +1,95 @@
 ---
 layout: default
-title: Peach-Store 상세
 ---
 
 <div class="page">
+  <div class="project-card">
 
-<h1>🛒 Peach-Store – 전자기기 커머스</h1>
-<p>옵션 조합 로직 · 재고 차감 · 상품 상세</p>
+    <img src="/assets/img/peachstore.png" class="project-img">
 
-<hr>
+    <h1>🛒 Peach-Store — 전자기기 커머스 플랫폼</h1>
 
-<h2>📌 프로젝트 개요</h2>
-<p>
-Peach-Store는 전자기기 옵션(기종/색상/용량)을 조합해 상품을 구성하고,  
-선택된 옵션에 따른 재고를 처리하는 커머스 프로젝트입니다.
-</p>
+    <div>
+      <span class="tag">Spring MVC</span>
+      <span class="tag">JSP</span>
+      <span class="tag">Bootstrap</span>
+      <span class="tag">MySQL</span>
+    </div>
 
-<hr>
+    <h2>📌 프로젝트 개요</h2>
+    <p>
+      전자기기를 판매하는 쇼핑몰을 구현한 프로젝트입니다.  
+      Apple Store처럼 <strong>기종 → 색상 → 용량</strong>을 선택하면 해당 옵션에 맞는 상품 정보를 보여주는 구조입니다.
+      저는 쇼핑몰에서 핵심이 되는 <strong>옵션 조합 처리, 상품 상세 데이터 구성, 옵션별 조회 필터링</strong>을 맡았습니다.
+    </p>
 
-<h2>🛠 기술 스택</h2>
-<ul>
-  <li>Backend: Spring MVC</li>
-  <li>View: JSP + Bootstrap</li>
-  <li>Database: MySQL</li>
-</ul>
+    <h2>📌 담당 역할 (My Role)</h2>
+    <ul>
+      <li>기종/색상/용량 옵션 조합 구조 설계</li>
+      <li>옵션 선택 시 상품 정보가 실시간으로 바뀌는 로직 구현</li>
+      <li>상품 상세페이지 및 옵션별 필터링 구현</li>
+      <li>상품·옵션 테이블 구조 설계 참여</li>
+    </ul>
 
-<hr>
+    <h2>📌 구현 기능 상세</h2>
 
-<h2>🎯 담당 역할</h2>
+    <h3>① 옵션 조합 구조 설계</h3>
+    <p>전자제품은 옵션 조합이 많기 때문에, 먼저 옵션 구조 설계를 맡았습니다.</p>
+    <ul>
+      <li><strong>기종(model)</strong> — 예: iPhone 13, iPhone 13 Pro</li>
+      <li><strong>색상(color)</strong> — 예: 블루, 그래파이트</li>
+      <li><strong>용량(storage)</strong> — 예: 128GB, 256GB</li>
+      <li>위 3가지를 묶어서 하나의 <strong>상품 옵션(item)</strong>으로 구성</li>
+      <li>옵션 조합마다 고유 item_id를 부여하는 구조 설계</li>
+    </ul>
 
-<h3>1) 옵션 조합 로직</h3>
-<ul>
-  <li>기종/색상/용량 옵션 구조 설계</li>
-  <li>옵션 조합 기반 상품 필터링</li>
-</ul>
+    <h3>② 옵션 선택 시 상품 상세정보 동적 변경</h3>
+    <ul>
+      <li>사용자가 기종을 선택하면 → 해당 기종의 색상만 표시</li>
+      <li>색상을 고르면 → 선택 가능한 용량만 표시</li>
+      <li>마지막 옵션까지 선택하면 → 해당 item 정보(가격/설명/이미지)를 출력</li>
+      <li>JSP + Bootstrap으로 UI 구성</li>
+    </ul>
 
-<h3>2) 재고 처리</h3>
-<ul>
-  <li>사용자 선택 → 해당 옵션 재고 차감 기능 구현</li>
-  <li>재고 소진 시 처리</li>
-</ul>
+    <h3>③ 상품 상세 페이지 구현</h3>
+    <p>
+      Apple Store처럼 이미지·설명·가격이 옵션에 따라 바뀌도록 구성했습니다.
+    </p>
+    <ul>
+      <li>상품 소개 이미지 출력</li>
+      <li>선택된 옵션의 가격 표시</li>
+      <li>선택 옵션을 URL parameter로 전달하여 새로고침 시에도 옵션 유지</li>
+    </ul>
 
-<h3>3) DB 설계</h3>
-<ul>
-  <li>상품/옵션/재고 테이블 구조 설계 참여</li>
-</ul>
+    <h3>④ 옵션 기반 상품 조회 필터링</h3>
+    <ul>
+      <li>옵션 선택 시 DB에서 해당 item_id 조회</li>
+      <li>JSP에서 비동기 요청으로 필요한 값만 불러오기</li>
+      <li>Spring MVC 컨트롤러에서 옵션별 select 처리</li>
+    </ul>
 
-<hr>
+    <h2>📌 DB 설계</h2>
+    <p>쇼핑몰의 옵션 조합이 많기 때문에 구조 정리가 중요했습니다.</p>
+    <ul>
+      <li>product(기본 상품 정보)</li>
+      <li>product_option(기종/색상/용량 조합)</li>
+      <li>product_image(옵션별 이미지 저장)</li>
+      <li>item(item_id)로 모든 옵션 조합 관리</li>
+    </ul>
 
-<h2>📎 GitHub Link</h2>
-<p>
-<a href="https://github.com/zero5ive/Peach-Store" target="_blank">
-  🔗 https://github.com/zero5ive/Peach-Store
-</a>
-</p>
+    <h2>📌 기술적 문제 & 해결</h2>
+    <ul>
+      <li>옵션 조합이 늘어날 때 중복 옵션이 보여서 필터 순서를 재정의하여 해결</li>
+      <li>색상/용량 조합이 안 맞는 경우 0건 조회 → "해당 옵션 없음" 추가 안내</li>
+      <li>상품 상세 페이지 새로고침 시 옵션 초기화 → parameter 유지 방식으로 해결</li>
+    </ul>
 
+    <h2>📌 결과</h2>
+    <p>
+      쇼핑몰에서 가장 중요한 <strong>옵션 선택 → 상품 상세정보 출력</strong>까지 전체 흐름을 직접 구현해,
+      전자기기 쇼핑몰의 핵심 기능을 완성했습니다.
+    </p>
+
+    <a href="https://github.com/zero5ive/Peach-Store" class="detail-btn">GitHub Repository</a>
+  </div>
 </div>
