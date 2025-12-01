@@ -3,21 +3,53 @@ layout: default
 title: Home
 ---
 
-<h1>👋 Hi! I'm Jimin</h1>
+<!-- INTRO CARD -->
+<div class="project-card" style="
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding: 32px;
+">
 
-<p>
-  Java & Spring 기반 백엔드 개발자입니다.<br>
-  실제 서비스의 핵심 기능 구현을 담당한 경험이 있습니다.
-</p>
+  <!-- 프로필 이미지 (대문자 PNG 파일명으로 수정!) -->
+  <img src="/assets/img/PROFILE.PNG"
+       alt="profile"
+       style="
+         width: 120px;
+         height: 120px;
+         object-fit: cover;
+         border-radius: 50%;
+         flex-shrink: 0;
+       ">
+
+  <div>
+    <h2 style="margin: 0 0 10px 0;">👋 Hi! I'm Jimin</h2>
+
+    <p style="margin: 0; line-height: 1.6; color: #333;">
+      Java & Spring 기반 백엔드 개발자입니다.<br>
+      API 설계, 데이터 모델링, 관리자 페이지 백엔드, AI 추천 기능 등<br>
+      실제 서비스의 핵심 로직 구현을 중심으로 개발을 이어오고 있습니다.
+    </p>
+
+    <div style="margin-top: 12px;">
+      <span class="tag">Java</span>
+      <span class="tag">Spring Boot</span>
+      <span class="tag">Spring MVC</span>
+      <span class="tag">JPA</span>
+      <span class="tag">MySQL</span>
+      <span class="tag">Docker</span>
+    </div>
+  </div>
+
+</div>
 
 <hr>
 
 <h2>📂 Projects</h2>
 
-
 <!-- Tabletopia -->
 <div class="project-card">
-  <img src="/assets/img/tabletopia.png" class="project-img">
+  <img src="/assets/img/TABLETOPIA.PNG" class="project-img">
 
   <h3>🍽 Tabletopia — 식당 예약 & AI 추천 플랫폼</h3>
 
@@ -33,10 +65,9 @@ title: Home
   <a href="/projects/tabletopia.html" class="detail-btn">자세히 보기</a>
 </div>
 
-
 <!-- WMS -->
 <div class="project-card">
-  <img src="/assets/img/wms.png" class="project-img">
+  <img src="/assets/img/WMS.PNG" class="project-img">
 
   <h3>📦 Shinlogis-WMS — 창고관리 시스템</h3>
 
@@ -51,10 +82,9 @@ title: Home
   <a href="/projects/wms.html" class="detail-btn">자세히 보기</a>
 </div>
 
-
 <!-- MiniInstagram -->
 <div class="project-card">
-  <img src="/assets/img/mininstagram.png" class="project-img">
+  <img src="/assets/img/INSTAGRAM.PNG" class="project-img">
 
   <h3>📸 MiniInstagram — 미니 SNS</h3>
 
@@ -69,10 +99,9 @@ title: Home
   <a href="/projects/mininstagram.html" class="detail-btn">자세히 보기</a>
 </div>
 
-
 <!-- Peach Store -->
 <div class="project-card">
-  <img src="/assets/img/peachstore.png" class="project-img">
+  <img src="/assets/img/PEACHSTORE.PNG" class="project-img">
 
   <h3>🛒 Peach Store — 전자기기 커머스</h3>
 
