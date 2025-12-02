@@ -3,115 +3,87 @@ layout: default
 title: Home
 ---
 
-<!-- INTRO CARD -->
-<div class="project-card" style="
+<div style="
   display: flex;
   align-items: center;
-  gap: 24px;
-  padding: 32px;
+  gap: 20px;
+  padding: 24px;
+  margin-bottom: 32px;
+  border: 1px solid #e5e5e5;
+  border-radius: 12px;
 ">
-
-  <!-- 프로필 이미지 (대문자 PNG 파일명으로 수정!) -->
-  <img src="/assets/img/PROFILE.PNG"
+  <img src="/assets/img/PROFILE.PNG" 
        alt="profile"
        style="
-         width: 120px;
-         height: 120px;
-         object-fit: cover;
+         width: 100px;
+         height: 100px;
          border-radius: 50%;
-         flex-shrink: 0;
+         object-fit: cover;
        ">
-
+       
   <div>
-    <h2 style="margin: 0 0 10px 0;">👋 Hi! I'm Jimin</h2>
-
-    <p style="margin: 0; line-height: 1.6; color: #333;">
+    <h2 style="margin: 0 0 6px 0;">👋 Hi! I'm Jimin</h2>
+    <p style="margin: 0; color: #555;">
       Java & Spring 기반 백엔드 개발자입니다.<br>
-      API 설계, 데이터 모델링, 관리자 페이지 백엔드, AI 추천 기능 등<br>
-      실제 서비스의 핵심 로직 구현을 중심으로 개발을 이어오고 있습니다.
+      안정적인 API 설계와 데이터 모델링, 운영 관리 기능 개발에 강점이 있습니다.
     </p>
 
-    <div style="margin-top: 12px;">
+    <div style="margin-top: 8px;">
       <span class="tag">Java</span>
       <span class="tag">Spring Boot</span>
-      <span class="tag">Spring MVC</span>
       <span class="tag">JPA</span>
       <span class="tag">MySQL</span>
       <span class="tag">Docker</span>
     </div>
   </div>
+</div>
+
+<h2>📂 Featured Projects</h2>
+
+<div class="project-grid" style="
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+  margin-top: 20px;
+">
+
+  <div class="project-card">
+    <img src="/assets/img/TABLETOPIA.PNG" class="project-img">
+    <h3>🍽 Tabletopia</h3>
+    <p>식당 예약·운영 + AI 추천이 결합된 풀스택 프로젝트</p>
+    <a href="/projects/tabletopia.html" class="detail-btn">자세히 보기</a>
+  </div>
+
+  <div class="project-card">
+    <img src="/assets/img/WMS.png" class="project-img">
+    <h3>📦 Shinlogis-WMS</h3>
+    <p>실제 창고 운영 흐름을 모두 구현한 재고 관리 시스템</p>
+    <a href="/projects/wms.html" class="detail-btn">자세히 보기</a>
+  </div>
 
 </div>
 
-<hr>
+<h2 style="margin-top: 40px;">📁 More Projects</h2>
 
-<h2>📂 Projects</h2>
+<div class="project-grid" style="
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+  margin-top: 16px;
+">
 
-<!-- Tabletopia -->
-<div class="project-card">
-  <img src="/assets/img/TABLETOPIA.PNG" class="project-img">
-
-  <h3>🍽 Tabletopia — 식당 예약 & AI 추천 플랫폼</h3>
-
-  <div>
-    <span class="tag">Spring Boot</span>
-    <span class="tag">MySQL</span>
-    <span class="tag">React Admin</span>
-    <span class="tag">OpenAI API</span>
+  <div class="project-card">
+    <img src="/assets/img/INSTAGRAM.PNG" class="project-img">
+    <h3>📸 MiniInstagram</h3>
+    <p>Firebase 인증 + 게시물 업로드 기능의 SNS</p>
+    <a href="/projects/mininstagram.html" class="detail-btn">자세히 보기</a>
   </div>
 
-  <p>식당 예약/운영 + AI 기반 식당 추천 기능을 포함한 풀스택 프로젝트.</p>
-
-  <a href="/projects/tabletopia.html" class="detail-btn">자세히 보기</a>
-</div>
-
-<!-- WMS -->
-<div class="project-card">
-  <img src="/assets/img/WMS.png" class="project-img">
-
-  <h3>📦 Shinlogis-WMS — 창고관리 시스템</h3>
-
-  <div>
-    <span class="tag">Spring Boot</span>
-    <span class="tag">JPA</span>
-    <span class="tag">MySQL</span>
+  <div class="project-card">
+    <img src="/assets/img/PEACHSTORE.PNG" class="project-img">
+    <h3>🛒 Peach Store</h3>
+    <p>옵션 조합·재고 차감 로직 중심의 커머스 프로젝트</p>
+    <a href="/projects/peachstore.html" class="detail-btn">자세히 보기</a>
   </div>
 
-  <p>유통기한/파손/입출고 등 재고 흐름을 처리하는 WMS 시스템.</p>
-
-  <a href="/projects/wms.html" class="detail-btn">자세히 보기</a>
-</div>
-
-<!-- MiniInstagram -->
-<div class="project-card">
-  <img src="/assets/img/INSTAGRAM.PNG" class="project-img">
-
-  <h3>📸 MiniInstagram — 미니 SNS</h3>
-
-  <div>
-    <span class="tag">Spring Boot</span>
-    <span class="tag">Firebase Auth</span>
-    <span class="tag">Airtable</span>
-  </div>
-
-  <p>게시물/댓글/이미지 업로드 + Firebase 인증 연동.</p>
-
-  <a href="/projects/mininstagram.html" class="detail-btn">자세히 보기</a>
-</div>
-
-<!-- Peach Store -->
-<div class="project-card">
-  <img src="/assets/img/PEACHSTORE.PNG" class="project-img">
-
-  <h3>🛒 Peach Store — 전자기기 커머스</h3>
-
-  <div>
-    <span class="tag">Spring MVC</span>
-    <span class="tag">JSP</span>
-    <span class="tag">MySQL</span>
-  </div>
-
-  <p>상품 옵션 조합/재고 차감/상품 상세 제공 로직 구현.</p>
-
-  <a href="/projects/peachstore.html" class="detail-btn">자세히 보기</a>
 </div>
