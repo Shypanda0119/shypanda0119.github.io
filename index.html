@@ -3,80 +3,86 @@ layout: default
 title: Home
 ---
 
-<!-- INTRO -->
-<div style="
-  display: flex;
-  gap: 20px;
-  padding: 20px;
-  border-radius: 12px;
-  border: 1px solid #e5e5e5;
-  margin-bottom: 28px;
-">
-  <img src="/assets/img/PROFILE.PNG"
-       style="
-         width: 85px;
-         height: 85px;
-         border-radius: 50%;
-         object-fit: cover;
-       ">
+<div class="hero-section mb-5">
+  <h1 class="fw-bold">Hi! I'm Jimin</h1>
 
-  <div>
-    <h2 style="margin: 0 0 8px 0;">👋 Hi! I'm Jimin</h2>
-
-    <p style="margin: 0; line-height: 1.5; font-size: 14px; color: #444;">
-      Java & Spring 중심으로 백엔드 개발을 공부하고 있는 지민입니다.<br>
-      여러 프로젝트를 만들면서 API 개발과 데이터 처리에 익숙해졌고,<br>
-      작은 기능이라도 직접 만들어보며 꾸준히 성장하고 있습니다.<br>
-      사용자가 편하게 사용할 수 있는 서비스를 만드는 개발자가 되고 싶습니다.
+  <div class="d-flex align-items-center mt-3">
+    <img src="/assets/img/profile.jpg" class="profile-img me-3">
+    <p class="mb-0">
+      Java와 Spring 기반으로 백엔드 개발을 공부하고 있습니다.<br>
+      팀 프로젝트를 진행하며 API 설계와 데이터 처리 흐름을 직접 경험했습니다.<br>
+      직접 구현하고 테스트하면서 부족한 부분을 계속 보완해 나가고 있습니다.
     </p>
+  </div>
 
-    <div style="margin-top: 10px; font-size: 13px;">
-      <span class="tag">Java</span>
-      <span class="tag">Spring Boot</span>
-      <span class="tag">JPA</span>
-      <span class="tag">MySQL</span>
-      <span class="tag">Docker</span>
-    </div>
+  <div class="mt-4">
+    <h5 class="fw-semibold mb-2">백엔드 개발자로 성장하고 있는 지민입니다.</h5>
+
+    <ul class="mt-3" style="line-height: 1.7;">
+      <li>Spring Boot로 기본적인 REST API를 작성해 여러 기능에 적용해봤습니다.</li>
+      <li>MySQL 테이블 설계와 간단한 쿼리 작성·수정 경험이 있습니다.</li>
+      <li>JWT 인증, 예외 처리, 트랜잭션 등의 기본 개념을 이해하며 적용해봤습니다.</li>
+      <li>Docker와 GitHub Actions를 활용해 개발 환경 구성과 간단한 자동화를 실습했습니다.</li>
+    </ul>
+  </div>
+
+  <div class="mt-4">
+    <span class="tag">Java</span>
+    <span class="tag">Spring Boot</span>
+    <span class="tag">JPA</span>
+    <span class="tag">MySQL</span>
+    <span class="tag">Redis</span>
+    <span class="tag">Docker</span>
   </div>
 </div>
 
-<!-- PROJECT GRID -->
-<div style="
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-  gap: 18px;
-">
+<h2 class="section-title">Projects</h2>
+<div class="section-divider"></div>
 
-  <div class="project-card" style="padding: 14px;">
-    <img src="/assets/img/TABLETOPIA.PNG"
-         style="width: 100%; height: 130px; object-fit: cover; border-radius: 6px;">
-    <h3 style="font-size: 17px; margin: 10px 0 6px 0;">🍽 Tabletopia</h3>
-    <p style="font-size: 13px; color: #666;">식당 예약 + 운영 관리 + AI 추천 기능</p>
-    <a href="/projects/tabletopia.html" class="detail-btn">자세히 보기</a>
+<div class="project-list mt-4">
+
+  <div class="project-card p-3">
+    <img src="/assets/img/tabletopia.png" class="project-img">
+    <h5 class="fw-bold mt-3">Tabletopia</h5>
+    <p class="small text-muted">식당 예약 + 운영 관리 + AI 추천</p>
+    <p class="small" style="line-height: 1.5;">
+      예약, 메뉴 관리 등 필요한 기능의 백엔드 로직을 구현했고<br>
+      OpenAI API를 연동해 간단한 추천 기능도 만들어봤습니다.
+    </p>
+    <a href="/tabletopia" class="btn btn-primary btn-sm mt-1">자세히 보기</a>
   </div>
 
-  <div class="project-card" style="padding: 14px;">
-    <img src="/assets/img/WMS.png"
-         style="width: 100%; height: 130px; object-fit: cover; border-radius: 6px;">
-    <h3 style="font-size: 17px; margin: 10px 0 6px 0;">📦 Shinlogis-WMS</h3>
-    <p style="font-size: 13px; color: #666;">입출고·파손·유통기한 관리 시스템</p>
-    <a href="/projects/wms.html" class="detail-btn">자세히 보기</a>
+  <div class="project-card p-3">
+    <img src="/assets/img/WMS.png" class="project-img">
+    <h5 class="fw-bold mt-3">Shinlogis-WMS</h5>
+    <p class="small text-muted">입출고·피킹·재고 관리 시스템</p>
+    <p class="small" style="line-height: 1.5;">
+      실제 물류 흐름을 참고해 입출고·피킹 과정을 코드로 정리했고<br>
+      필요한 API들과 데이터 구조를 직접 설계해 구현했습니다.
+    </p>
+    <a href="/wms" class="btn btn-primary btn-sm mt-1">자세히 보기</a>
   </div>
 
-  <div class="project-card" style="padding: 14px;">
-    <img src="/assets/img/INSTAGRAM.PNG"
-         style="width: 100%; height: 130px; object-fit: cover; border-radius: 6px;">
-    <h3 style="font-size: 17px; margin: 10px 0 6px 0;">📸 MiniInstagram</h3>
-    <p style="font-size: 13px; color: #666;">Firebase 인증 기반 SNS</p>
-    <a href="/projects/mininstagram.html" class="detail-btn">자세히 보기</a>
+  <div class="project-card p-3">
+    <img src="/assets/img/miniinsta.png" class="project-img">
+    <h5 class="fw-bold mt-3">MiniInstagram</h5>
+    <p class="small text-muted">Firebase 인증 기반 SNS</p>
+    <p class="small" style="line-height: 1.5;">
+      Firebase 인증과 게시글·사진 업로드 기능을 구현하며<br>
+      클라이언트와 서버의 데이터 흐름을 익혔습니다.
+    </p>
+    <a href="/miniinstagram" class="btn btn-primary btn-sm mt-1">자세히 보기</a>
   </div>
 
-  <div class="project-card" style="padding: 14px;">
-    <img src="/assets/img/PEACHSTORE.PNG"
-         style="width: 100%; height: 130px; object-fit: cover; border-radius: 6px;">
-    <h3 style="font-size: 17px; margin: 10px 0 6px 0;">🛒 Peach Store</h3>
-    <p style="font-size: 13px; color: #666;">옵션·재고 관리 중심의 커머스</p>
-    <a href="/projects/peachstore.html" class="detail-btn">자세히 보기</a>
+  <div class="project-card p-3">
+    <img src="/assets/img/peach.png" class="project-img">
+    <h5 class="fw-bold mt-3">Peach Store</h5>
+    <p class="small text-muted">옵션·재고 관리 커머스</p>
+    <p class="small" style="line-height: 1.5;">
+      상품 옵션과 재고 관리 구조를 직접 설계해보며<br>
+      기본적인 CRUD API와 DB 설계를 연습했습니다.
+    </p>
+    <a href="/peach-store" class="btn btn-primary btn-sm mt-1">자세히 보기</a>
   </div>
 
 </div>
