@@ -89,3 +89,25 @@
   background: #3B82F6;
   color: white;
 }
+
+.main-project-card {
+  display: flex;
+  gap: 24px;
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  padding: 22px;
+  border-radius: 12px;
+  margin-bottom: 40px;
+}
+
+.main-project-img {
+  width: 45%;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.sub-project-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 26px;
+}
