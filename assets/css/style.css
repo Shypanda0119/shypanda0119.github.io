@@ -1,4 +1,5 @@
 /* ====== Hero Section ====== */
+
 .hero-section {
   padding: 25px 25px 30px 25px;
   background: white;
@@ -8,15 +9,38 @@
   margin-bottom: 40px;
 }
 
+/* 프로필 레이아웃 */
+.hero-profile {
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+}
+
 /* 프로필 이미지 */
-.profile-img{
-  width:110px;
-  height:110px;
-  border-radius:50%;
-  object-fit:cover;
+.profile-img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+/* 텍스트 영역 */
+.hero-text {
+  flex: 1;
+}
+
+.hero-text h1 {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.hero-text .lead {
+  margin-bottom: 20px;
 }
 
 /* Tag */
+
 .tag {
   background: #e2e8f0;
   padding: 4px 10px;
@@ -26,6 +50,7 @@
 }
 
 /* Section Title */
+
 .section-title {
   font-size: 22px;
   font-weight: 700;
@@ -40,6 +65,7 @@
 }
 
 /* ====== Other Projects (Sub Project List) ====== */
+
 .sub-project-list {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -47,6 +73,7 @@
 }
 
 /* 카드 */
+
 .project-card {
   border: 1px solid #e5e7eb;
   padding: 20px;
@@ -61,6 +88,7 @@
 }
 
 /* 카드 이미지 */
+
 .project-img {
   width: 100%;
   height: 90px;
@@ -70,6 +98,7 @@
 }
 
 /* 자세히 보기 버튼 */
+
 .detail-btn {
   display: inline-block;
   padding: 8px 14px;
@@ -89,6 +118,7 @@
 }
 
 /* ====== 대표 프로젝트(Main Project) ====== */
+
 .main-project-card {
   display: flex;
   align-items: flex-start;
@@ -124,6 +154,7 @@
 /* ============================================
    TECH STACK (ICON GRID CARD VERSION)
    ============================================ */
+
 .tech-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
@@ -152,6 +183,7 @@
 }
 
 /* 🚨 전역 img 규칙 때문에 아이콘 깨지는 문제 방지 */
+
 .hero-section .tech-card img,
 .tech-grid .tech-card img,
 .tech-card img {
@@ -166,6 +198,7 @@
 }
 
 /* 글자 */
+
 .tech-card span {
   font-size: 14px;
   color: #374151;
