@@ -9,11 +9,11 @@
 }
 
 /* 프로필 이미지 */
-.profile-img {
-  width: 58px;
-  height: 58px;
-  object-fit: cover;
-  border-radius: 50%;
+.profile-img{
+  width:110px;
+  height:110px;
+  border-radius:50%;
+  object-fit:cover;
 }
 
 /* Tag */
